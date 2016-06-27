@@ -10,10 +10,9 @@ source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/"
 url = urllib.urlopen(source + "4.5_month.csv")
 
 data = url.read().split('\n')[1:-1] #excluir cabecalho e ultima linha, pois esta' vazia
-
+url.close()
 # Algum codigo processando os dados lidos
 dadosSeparados=[]
-url.close()
 time = []
 latitude = []
 longitude = []

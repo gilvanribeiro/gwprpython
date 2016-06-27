@@ -9,11 +9,10 @@ source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/"
 url = urllib.urlopen(source + "4.5_month.csv")
 
 data = url.read().split('\n')[1:-1] #excluir cabecalho e ultima linha, pois esta' vazia
-
+url.close()
 #Algum codigo processando os dados lidos
 
 dadosSeparados=[]
-url.close()
 time = []
 latitude = []
 longitude = []
@@ -37,13 +36,8 @@ for row in dadosSeparados:
         else:
             place.append(row[14].replace('"', ''))
 
-for row in cor:
-    print cor
-
-
-plt.figure(figsize=(14,10))
-plt.axes([0, 25,50,75])
-plt.subplot(1,1,1)
+plt.figure(figsize=(14, 10))
+plt.subplot(1, 1, 1)
 plt.scatter(longitude, latitude, marker='o', color=cor, s=tamanho)
 plt.grid(True, linestyle="-", color='0.75',linewidth=0.75)
 # Restante do codigo para gerar o grafico

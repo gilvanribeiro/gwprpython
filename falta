@@ -1,0 +1,13 @@
+
+
+3. Scatterplot:
+O scatterplot deverá ter um grid cujas linhas possuem distância 25 no eixo X e 10 no eixo Y
+
+4. Gráfico de Linhas:
+saber qual atributo refere aos números de terremoto por dia
+
+5. Gráfico de Barras
+saber qual atributo refere aos números de terremoto por dia
+
+Além disso, quando o nome do país for maior que 13, a string deve ser abreviada tomando as 5 primeiras letras
+e as 5 últimas concatenadas com 3 pontos entre elas (ex: ‘abcdefghijklmno’ se tornaria ‘abcde...klmno’).
